@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Hub | Video Gear & Links</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              red: '#FF0000',
+              purple: '#8B5CF6',
+              cyan: '#06B6D4',
+              dark: '#0B0F17',
+              card: '#151C2C',
+              border: '#1F293D'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-card {
+      background: rgba(21, 28, 44, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hover-glow:hover {
+      box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.35);
+    }
+    .insta-gradient {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans min-h-screen selection:bg-purple-500 selection:text-white pb-12">
+
+  <!-- Background Decorative Blurs -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-purple-900/20 via-cyan-900/10 to-transparent blur-3xl pointer-events-none"></div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed top-5 right-5 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-300 bg-emerald-500 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 font-semibold text-sm">
+    <i class="fa-solid fa-circle-check text-lg"></i>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <main class="max-w-xl mx-auto px-4 pt-8 relative z-10">
+
+    <!-- Top Badge -->
+    <div class="text-center mb-6">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20 shadow-sm">
+        <i class="fa-solid fa-bolt text-amber-400 animate-pulse"></i> Official Creator Hub
+      </span>
+    </div>
+
+    <!-- Creator Profile Header -->
+    <section class="glass-card rounded-3xl p-6 mb-6 text-center relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-r from-purple-600/30 via-red-600/20 to-cyan-600/30"></div>
+      
+      <div class="relative z-10">
+        <div class="relative inline-block mb-3 p-1 rounded-full insta-gradient">
+          <img 
+            src="profile.jpg" 
+            alt="Creator Profile" 
+            class="w-24 h-24 rounded-full border-2 border-brand-dark shadow-xl object-cover mx-auto"
+            onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80'"
+          >
+          <span class="absolute bottom-1 right-1 bg-blue-500 text-white text-xs p-1 rounded-full w-5 h-5 flex items-center justify-center shadow-lg" title="Verified Creator">
+            <i class="fa-solid fa-check text-[10px]"></i>
+          </span>
+        </div>
+
+        <h1 class="text-2xl font-extrabold tracking-tight flex items-center justify-center gap-2">
+          Your Channel Name <i class="fa-solid fa-circle-check text-blue-400 text-lg"></i>
+        </h1>
+        <p class="text-slate-400 text-sm font-medium mt-1">Check out featured products, deals, and gear below!</p>
+
+        <!-- Social Media Links -->
+        <div class="grid grid-cols-4 gap-2 mt-5">
+          <a href="#" class="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-800/60 hover:bg-red-600/20 border border-slate-700/50 transition-all group">
+            <i class="fa-brands fa-youtube text-lg text-red-500 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-semibold text-slate-300">YouTube</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-800/60 hover:bg-pink-600/20 border border-slate-700/50 transition-all group">
+            <i class="fa-brands fa-instagram text-lg text-pink-500 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-semibold text-slate-300">Instagram</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-800/60 hover:bg-indigo-600/20 border border-slate-700/50 transition-all group">
+            <i class="fa-brands fa-discord text-lg text-indigo-400 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-semibold text-slate-300">Discord</span>
+          </a>
+          <a href="#" class="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-slate-800/60 hover:bg-cyan-600/20 border border-slate-700/50 transition-all group">
+            <i class="fa-brands fa-x-twitter text-lg text-slate-200 group-hover:scale-110 transition-transform"></i>
+            <span class="text-[10px] font-semibold text-slate-300">Twitter</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="flex p-1 bg-slate-900/80 border border-slate-800 rounded-2xl mb-6">
+      <button id="tab-products-btn" onclick="switchTab('products')" class="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 bg-purple-600 text-white shadow-lg">
+        <i class="fa-solid fa-bag-shopping"></i> Products Used
+      </button>
+      <button id="tab-codes-btn" onclick="switchTab('codes')" class="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 text-slate-400 hover:text-slate-200">
+        <i class="fa-solid fa-ticket"></i> Deals & Coupons
+      </button>
+      <button id="tab-about-btn" onclick="switchTab('about')" class="flex-1 py-2.5 px-3 rounded-xl text-xs font-bold transition-all duration-200 flex items-center justify-center gap-2 text-slate-400 hover:text-slate-200">
+        <i class="fa-solid fa-user"></i> About
+      </button>
+    </div>
+
+    <!-- TAB 1: PRODUCTS LIST -->
+    <div id="tab-products" class="space-y-4">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="text-xs uppercase tracking-wider font-extrabold text-slate-400">
+          Featured In Latest Video
+        </h2>
+        <span class="text-[11px] bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full border border-slate-700">Verified Links</span>
+      </div>
+
+      <!-- Products Cards -->
+      <div class="space-y-3">
+        <!-- Product Card 1 -->
+        <div class="glass-card rounded-2xl p-4 hover-glow transition-all duration-300 flex items-center gap-4 border border-slate-800">
+          <div class="w-16 h-16 bg-slate-800/80 rounded-xl flex items-center justify-center flex-shrink-0 relative">
+            <i class="fa-solid fa-headphones text-2xl text-cyan-400"></i>
+            <span class="absolute top-1 left-1 bg-yellow-500 text-slate-950 font-black text-[8px] px-1 py-0.2 rounded">Flipkart</span>
+          </div>
+          <div class="flex-grow min-w-0">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[10px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded"><i class="fa-solid fa-clock text-purple-400"></i> 02:15</span>
+              <span class="text-[10px] font-bold text-slate-300 bg-slate-800/60 px-2 py-0.5 rounded">Featured Gear</span>
+            </div>
+            <h3 class="font-bold text-sm text-slate-100 truncate">Featured Product #1</h3>
+            <a href="https://dl.flipkart.com/s/kjBumtuuuN" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-400 hover:text-amber-300 mt-1.5 transition-colors">
+              Buy on Flipkart <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="glass-card rounded-2xl p-4 hover-glow transition-all duration-300 flex items-center gap-4 border border-slate-800">
+          <div class="w-16 h-16 bg-slate-800/80 rounded-xl flex items-center justify-center flex-shrink-0 relative">
+            <i class="fa-solid fa-gamepad text-2xl text-purple-400"></i>
+            <span class="absolute top-1 left-1 bg-yellow-500 text-slate-950 font-black text-[8px] px-1 py-0.2 rounded">Flipkart</span>
+          </div>
+          <div class="flex-grow min-w-0">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[10px] font-bold text-slate-400 bg-slate-800 px-2 py-0.5 rounded"><i class="fa-solid fa-clock text-purple-400"></i> 05:40</span>
+              <span class="text-[10px] font-bold text-slate-300 bg-slate-800/60 px-2 py-0.5 rounded">Gaming Equipment</span>
+            </div>
+            <h3 class="font-bold text-sm text-slate-100 truncate">Featured Product #2</h3>
+            <a href="https://dl.flipkart.com/s/kj4H6tuuuN" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-400 hover:text-amber-300 mt-1.5 transition-colors">
+              Buy on Flipkart <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: COUPON CODES -->
+    <div id="tab-codes" class="space-y-4 hidden">
+      <div class="flex items-center justify-between px-1">
+        <h2 class="text-xs uppercase tracking-wider font-extrabold text-slate-400">Exclusive Audience Discounts</h2>
+      </div>
+
+      <div class="glass-card rounded-2xl p-4 border border-slate-800 flex items-center justify-between gap-4">
+        <div>
+          <span class="text-[10px] font-bold text-purple-400 uppercase tracking-wider">Shopping Partner</span>
+          <h3 class="font-bold text-sm text-slate-100">Get 15% OFF On Tech & Gear</h3>
+          <p class="text-xs text-slate-400 mt-0.5">Use discount code at checkout.</p>
+        </div>
+        <button onclick="copyToClipboard('CREATOR15', 'Discount Code CREATOR15 copied!')" 
+                class="bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold px-3 py-2 rounded-xl flex items-center gap-1.5 transition-colors flex-shrink-0">
+          <span>CREATOR15</span>
+          <i class="fa-solid fa-copy text-[10px]"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- TAB 3: ABOUT CREATOR -->
+    <div id="tab-about" class="space-y-4 hidden">
+      <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-3">
+        <h3 class="font-extrabold text-sm text-slate-100 flex items-center gap-2">
+          <i class="fa-solid fa-bullhorn text-purple-400"></i> Channel Bio
+        </h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Welcome to my official video link hub! Browse through my page to find exact buy links for every product, outfit, or gear featured in my latest videos.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-5 border border-slate-800 space-y-3">
+        <h3 class="font-extrabold text-sm text-slate-100 flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-purple-400"></i> Business Inquiries
+        </h3>
+        <p class="text-xs text-slate-400">
+          For brand collaborations, sponsorships, and business requests:
+        </p>
+        <div class="flex items-center justify-between bg-slate-900/90 p-3 rounded-xl border border-slate-800">
+          <span class="text-xs font-mono text-slate-200">business@creator.com</span>
+          <button onclick="copyToClipboard('business@creator.com', 'Business email copied!')" class="text-xs text-purple-400 hover:text-purple-300 font-bold flex items-center gap-1">
+            <i class="fa-solid fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(tabName) {
+      document.getElementById('tab-products').classList.add('hidden');
+      document.getElementById('tab-codes').classList.add('hidden');
+      document.getElementById('tab-about').classList.add('hidden');
+
+      const activeBtnClasses = ['bg-purple-600', 'text-white', 'shadow-lg'];
+      const inactiveBtnClasses = ['text-slate-400'];
+
+      ['products', 'codes', 'about'].forEach(t => {
+        const btn = document.getElementById(`tab-${t}-btn`);
+        btn.classList.remove(...activeBtnClasses);
+        btn.classList.add(...inactiveBtnClasses);
+      });
+
+      document.getElementById(`tab-${tabName}`).classList.remove('hidden');
+
+      const currentBtn = document.getElementById(`tab-${tabName}-btn`);
+      currentBtn.classList.remove(...inactiveBtnClasses);
+      currentBtn.classList.add(...activeBtnClasses);
+    }
+
+    function copyToClipboard(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toast-message');
+        toastMsg.innerText = msg;
+        
+        toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+
+        setTimeout(() => {
+          toast.classList.remove('translate-y-0', 'opacity-100');
+          toast.classList.add('translate-y-[-100px]', 'opacity-0');
+        }, 2500);
+      });
+    }
+  </script>
+</body>
+</html>
